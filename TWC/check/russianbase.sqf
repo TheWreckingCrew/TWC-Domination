@@ -6,4 +6,4 @@ if (_RussiaDistance < 1000) then {
 systemChat "This is a Russian vehicle!";
 
    };
-}:
+};
