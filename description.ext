@@ -63,3 +63,11 @@ class CfgDebriefing {
         description = "*** Insert debriefing #6 here. ***";
     };
 };
+
+class Extended_PreInit_EventHandlers {
+    #include "twc\radios\CfgEventhandlerPreInit.hpp"
+};
+
+class Extended_PostInit_EventHandlers {
+    #include "twc\radios\CfgEventhandlerPostInit.hpp"
+};
