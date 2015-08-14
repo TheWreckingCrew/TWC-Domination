@@ -1,5 +1,5 @@
 #define PREFIX twc
-#define COMPONENT radios
+#define COMPONENT empty
 #include "\x\cba\addons\main\script_macros_mission.hpp"
 
 #define EGVAR(module,var) TRIPLES(PREFIX,module,var)
