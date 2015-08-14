@@ -6,8 +6,6 @@ x_reload_time_factor = 1;
 
 _object lock true;
 
-_object setFuel 0;
-
 _object setVehicleAmmo 1;
 
 _object vehicleChat format ["Servicing %1... Please stand by...", _type];
@@ -80,13 +78,14 @@ while {(damage _object > 0.001)} do{
 	_object setdamage (damage _object - 0.001);
 
 };
-Waituntil {damage _object < 0.1};
+
 _object vehicleChat "Refueling...";
 
 while {(fuel _object) < 0.99 } do {
         sleep 0.01;
-        if (speed _object != 0) then {_object setVelocity [0,0,0]};
-        _object setFuel (fuel _object + 0.000425);
+        if (speed _object != 0) then {_object setVelocity [0,0,-0.4]};
+        _object setFuel (fuel _object + 0.00425);
+				if (isengineOn _object) then {_object engineon False;};
     };
 
 sleep x_reload_time_factor;

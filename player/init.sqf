@@ -331,11 +331,7 @@ g_p49 = "";
 g_p50 = "";
 
 execVM "player\boxes\main_ammo.sqf";
-_test = format["hint '%1'",getPlayerUID player];
-_test2 = format["hint '%1'",({side _x == WEST} count playableUnits)];
-if(false)then{
-	id_test_status = ["Debug", {true}, _test2, true] call AGM_Interaction_fnc_addInteractionSelf;
-};
+
 
 _playerlist = ['TWC_player','Playerlist','', {[] execVM "lib\playerlist.sqf";},{true}] call ace_interact_menu_fnc_createAction;
  [player, 1, ["ACE_SelfActions"], _playerlist] call ace_interact_menu_fnc_addActionToObject;
