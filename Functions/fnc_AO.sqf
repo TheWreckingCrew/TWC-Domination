@@ -12,8 +12,6 @@
 *
 */
 
-
-
 //bunker set and Radar set
 AObunkercount = 0;
 RadioTowerCheck = 0;
@@ -34,8 +32,7 @@ _bunkergun = "RHS_NSV_TriPod_MSV";
 _radar = "rhs_p37";
 
 //array select
-_AOname = _this select 0;  //example "pygros"
-
+params ["_AOname"]; //example "pygros"
 
 //formating
 private ["_CentralMarker","_bunkerone","_bunkertwo","_bunkerthree"];
@@ -45,17 +42,15 @@ _bunkertwo = format ["ao%1bunkertwo",_AOname]; // example "aopygrosbunkertwo"
 _bunkerthree = format ["ao%1bunkerthree",_AOname]; // example "aopygrosbunkerthree"
 
 
-if isServer then {
-
+if (isServer) then {
 	_AOAreaMarker = createMarker [ _CentralMarker , position player ];
 	_AOAreaMarker setmarkerpos getmarkerpos _AOname;
 	_AOAreaMarker setmarkershape "ELLIPSE";
 	_AOAreaMarker setmarkersize [700, 700];
 	_AOAreaMarker setmarkercolor "ColorRed";
+};
 
- };
-
-if isServer then {
+if (isServer) then {
 	private ["_pos","_m"];
 	_pos = [getmarkerpos _CentralMarker,[100,600],[0,120],0,[1,200]] call SHK_pos;
 	_AOBunkerOneMarker = createMarker [ _bunkerone, _pos];
@@ -63,7 +58,6 @@ if isServer then {
 	_AOBunkerOneMarker setmarkertype "n_unknown";
 	_AOBunkerOneMarker setmarkersize [0.5, 0.5];
 	_AOBunkerOneMarker setmarkercolor "ColorBlack";
-
 
 	 _AOBunkerOneSpawn = "Land_BagBunker_Large_F" createVehicle (_pos);
 
@@ -83,13 +77,10 @@ if isServer then {
  	_AOBunkerOnePatrolOne = [_pos, EAST, _squad] call BIS_fnc_spawnGroup;
 	[_AOBunkerOnePatrolOne, _pos, 250, 7, "MOVE", "RELAXED", "YELLOW", "LIMITED", "COLUMN"] call CBA_fnc_taskPatrol;
 
-        _positionForTrigger = _pos;
+    _positionForTrigger = _pos;
 	_areaForTrigger = [10,10,0,false];
 	_activationForTrigger = ["WEST", "PRESENT", true];
-	_stateForTrigger = ["this",
-	format["
-		AObunkercount = AObunkercount + 1; hint 'Bunker Captured';  '%1' setmarkercolor 'ColorBlue';
-	",_bunkerone], "deleteVehicle thisTrigger;"];
+	_stateForTrigger = ["this", format ["AObunkercount = AObunkercount + 1; hint 'Bunker Captured';  '%1' setmarkercolor 'ColorBlue';", _bunkerone], "deleteVehicle thisTrigger;"];
 	_BunkerTriggerAreaOne = ([_positionForTrigger, "AREA:", _areaForTrigger, "ACT:", _activationForTrigger, "STATE:", _stateForTrigger] call CBA_fnc_createTrigger) select 0;
 	_BunkerTriggerAreaOne setTriggerTimeout [_bunkertime, _bunkertime, _bunkertime, true];
 
@@ -106,7 +97,7 @@ if isServer then {
 	_AOBunkerTwoMarker setmarkercolor "ColorBlack";
 
 
-	 _AOBunkerTwoSpawn = "Land_BagBunker_Large_F" createVehicle (_pos);
+ 	_AOBunkerTwoSpawn = "Land_BagBunker_Large_F" createVehicle (_pos);
 
 	_AOBunkerTwoGunOne = _bunkergun createVehicle (_pos);
 	_AOBunkerTwoGunOne setPos [(getPos _AOBunkerTwoGunOne select 0)+6, getPos _AOBunkerTwoGunOne select 1, 0];
@@ -303,6 +294,3 @@ waituntil {(AObunkercount == 3) &&  (RadioTowerCheck == 1)};
   { deleteVehicle _x } forEach allDead;
   sleep 10;
   null=[]execVm "ao\RandomArray.sqf";
-
-
-

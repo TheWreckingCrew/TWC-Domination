@@ -1,6 +1,4 @@
-
-
- _SideMissionCenter = _this select 0;
+params ["_SideMissionCenter"];
 
 _CentralMarker = format ["AreaMarker%1",_SideMissionCenter]; // example "aopygros"
 _WritingMarker = format ["WritingMarker%1",_SideMissionCenter]; // example "aopygrosbunkerone"
