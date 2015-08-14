@@ -101,7 +101,7 @@ class CfgDebriefing
 };
 
 
-#include "CHVD\dialog.hpp"
+
 
 class CfgFunctions
 
@@ -109,7 +109,7 @@ class CfgFunctions
 {
 
 
-#include "CHVD\CfgFunctions.hpp"
+
    class TWC
 	{
 
@@ -151,5 +151,3 @@ class CfgFunctions
 		};
 	};
 };
-
-
