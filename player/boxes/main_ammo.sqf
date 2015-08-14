@@ -9,7 +9,7 @@
 
         For more classnames on ammoboxes or weapons and magazines go here:
                 http://forums.bistudio.com/showthread.php?t=73241&page=2
-				edited by FakeMatty 
+				edited by FakeMatty
 */
 
 _marker = "crate";  // marker used to spawn.
@@ -65,7 +65,7 @@ if (g_class == "BAF_SL") then {
         _tmp_weapons =
         [
 								["UK3CB_BAF_L85A2_RIS",1],
-								["UK3CB_BAF_L131A1",1],
+								["UK3CB_BAF_L110A2",1],
 								["launch_NLAW_F",3],
 								["rhs_weap_fgm148", 2],
 								["rhs_weap_fim92",1],
