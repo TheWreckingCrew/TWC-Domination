@@ -65,9 +65,11 @@ class CfgDebriefing {
 };
 
 class Extended_PreInit_EventHandlers {
+    #include "twc\ammobox\CfgEventhandlerPreInit.hpp"
     #include "twc\radios\CfgEventhandlerPreInit.hpp"
 };
 
 class Extended_PostInit_EventHandlers {
+    #include "twc\ammobox\CfgEventhandlerPostInit.hpp"
     #include "twc\radios\CfgEventhandlerPostInit.hpp"
 };

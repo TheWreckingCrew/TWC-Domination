@@ -116,7 +116,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.44999999;
 					text="p1";
-					init="this join g1;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_SLR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_SLR.sqf'""]; [this, ""BAF_SL""] call twc_ammobox_fnc_assignLoadoutType;";
 					description="Alpha Section Lead";
 				};
 				class Item1
@@ -130,7 +130,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p2";
-					init="this join g2;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""]; [this, ""BAF_RF""] call twc_ammobox_fnc_assignLoadoutType;";
 					description="Alpha Rifleman";
 				};
 				class Item2
@@ -144,7 +144,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p3";
-					init="this join g3;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""]; [this, ""BAF_G""] call twc_ammobox_fnc_assignLoadoutType;";
 					description="Alpha Grenadier";
 				};
 				class Item3
@@ -158,7 +158,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p4";
-					init="this join g4;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""]; [this, ""BAF_AR""] call twc_ammobox_fnc_assignLoadoutType;";
 					description="Alpha Automatic Rifleman";
 				};
 				class Item4
@@ -173,7 +173,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.44999999;
 					text="p5";
-					init="this join g5;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""]; [this, ""BAF_2""] call twc_ammobox_fnc_assignLoadoutType;";
 					description="Alpha 2IC";
 				};
 				class Item5
@@ -187,7 +187,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p6";
-					init="this join g6;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""]; [this, ""BAF_MG""] call twc_ammobox_fnc_assignLoadoutType;";
 					description="Alpha MachineGunner";
 				};
 				class Item6
@@ -198,9 +198,10 @@ class Mission
 					id=6;
 					side="WEST";
 					vehicle="BAF_Soldier_2_Infantry_L_M_DG1";
+					player="PLAY CDG";
 					skill=0.40000001;
 					text="p7";
-					init="this join g7;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""]; [this, ""BAF_MARK""] call twc_ammobox_fnc_assignLoadoutType;";
 					description="Alpha Marksman";
 				};
 				class Item7
@@ -214,7 +215,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p8";
-					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\BAF_RFR.sqf'""]; [this, ""BAF_MED""] call twc_ammobox_fnc_assignLoadoutType;";
 					description="Alpha Medic";
 				};
 			};
@@ -238,7 +239,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					text="p9";
-					init="this join g9;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_SLR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_SLR.sqf'""];";
 					description="Bravo Squad Lead";
 				};
 				class Item1
@@ -253,7 +254,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.44999999;
 					text="p10";
-					init="this join g10;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
 					description="Bravo Team Lead";
 				};
 				class Item2
@@ -267,7 +268,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p11";
-					init="this join g11;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
 					description="Bravo Rifleman";
 				};
 				class Item3
@@ -282,7 +283,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.44999999;
 					text="p12";
-					init="this join g12;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
 					description="Bravo Automatic Rifleman";
 				};
 				class Item4
@@ -296,7 +297,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p13";
-					init="this join g13;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
 					description="Bravo Grenadier";
 				};
 				class Item5
@@ -311,7 +312,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.44999999;
 					text="p14";
-					init="this join g14;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
 					description="Bravo Team Lead";
 				};
 				class Item6
@@ -325,7 +326,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p15";
-					init="this join g15;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
 					description="Bravo Automatic Rifleman";
 				};
 				class Item7
@@ -339,7 +340,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p16";
-					init="this join g16;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\US_RFR.sqf'""];";
 					description="Bravo Marksman";
 				};
 				class Item8
@@ -377,7 +378,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					text="p18";
-					init="this join g18;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_SLR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_SLR.sqf'""];";
 					description="Charlie Squad Lead";
 				};
 				class Item1
@@ -392,7 +393,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.76923108;
 					text="p19";
-					init="this join g19;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
 					description="Charlie Team Lead";
 				};
 				class Item2
@@ -406,7 +407,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p20";
-					init="this join g20;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
 					description="Charlie Rifleman";
 				};
 				class Item3
@@ -421,7 +422,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.44999999;
 					text="p21";
-					init="this join g21;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
 					description="Charlie Automatic rifleman";
 				};
 				class Item4
@@ -435,7 +436,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p22";
-					init="this join g22;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
 					description="Charlie Automatic rifleman Assistant";
 				};
 				class Item5
@@ -450,7 +451,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.44999999;
 					text="p23";
-					init="this join g23;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
 					description="Charlie Team Lead";
 				};
 				class Item6
@@ -464,7 +465,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p24";
-					init="this join g24;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
 					description="Charlie Rifleman";
 				};
 				class Item7
@@ -478,7 +479,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p26";
-					init="this join g26;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
 					description="Charlie Automatic rifleman";
 				};
 				class Item8
@@ -492,7 +493,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p25";
-					init="this join g25;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
 					description="Charlie Automatic rifleman Assistant";
 				};
 				class Item9
@@ -507,7 +508,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.44999999;
 					text="p27";
-					init="this join g27;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
 					description="Charlie Team Lead";
 				};
 				class Item10
@@ -521,7 +522,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p29";
-					init="this join g29;this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
+					init="this addeventhandler [""respawn"",""_this execVM 'ACEFIX\USMC_RFR.sqf'""];";
 					description="Charlie Rifleman";
 				};
 				class Item11
@@ -535,7 +536,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="p28";
-					init="this join g28;";
+					init="";
 					description="Charlie Automatic rifleman";
 				};
 				class Item12
@@ -835,7 +836,7 @@ class Mission
 					leader=1;
 					skill=0.44999999;
 					text="p33";
-					init="this join g33;";
+					init="";
 					description="Wildcat Pilot";
 				};
 			};
@@ -857,7 +858,7 @@ class Mission
 					leader=1;
 					skill=0.44999999;
 					text="p31";
-					init="this join g31;";
+					init="";
 					description="BlackHawk Pilot";
 				};
 			};
