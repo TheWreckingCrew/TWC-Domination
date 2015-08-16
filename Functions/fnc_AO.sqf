@@ -272,10 +272,10 @@ if isServer then {
 	_pos = [getmarkerpos _CentralMarker,[100,600],[0,120],0,[1,200]] call SHK_pos;
 	_RadioTower = "rhs_p37" createVehicle (_pos);
 	_RadioTower setdamage 0.99;
-
+[] spawn {
 		sleep 1000;
 		[_AOname] call TWC_fnc_RadioTower;
-
+};
 		waituntil { damage _RadioTower == 1};
 		RadioTowerCheck = RadioTowerCheck + 1;
 		hint "Radio Tower Destroyed";
@@ -284,7 +284,7 @@ if isServer then {
 
 
 
-waituntil {(AObunkercount == 3) &&  (RadioTowerCheck == 1)};
+waituntil {(triggeractivated _BunkerTriggerAreaOne) && (triggeractivated _BunkerTriggerAreaTwo) && (triggeractivated _BunkerTriggerAreaThree) &&  (triggeractivated _BunkerTriggerAreaThree) };
 
    [format["Task%1",TaskIncrease],"succeeded"] call TWC_fnc_UpdateTask;
   _CentralMarker setmarkercolor "Colorblue";
