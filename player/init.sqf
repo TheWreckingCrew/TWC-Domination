@@ -209,42 +209,42 @@ if (!isNil "P36" && {player == P36}) then {
 };
 
 if (!isNil "P37" && {player == P37}) then {
-    g_class = "SPOTTER";
+    g_class = "SWD_SL";
 	g_group = "1";
 	g_unit = "145";
 };
 if (!isNil "P38" && {player == P38}) then {
-    g_class = "SNIPER";
+    g_class = "SWD_GRN";
 	g_group = "1";
 	g_unit = "146";
 };
 if (!isNil "P39" && {player == P39}) then {
-    g_class = "CSL";
+    g_class = "SWD_AR";
 	g_group = "1";
 	g_unit = "147";
 };
 if (!isNil "P40" && {player == P40}) then {
-    g_class = "CTL";
+    g_class = "SWD_MED";
 	g_group = "1";
 	g_unit = "148";
 };
 if (!isNil "P41" && {player == P41}) then {
-    g_class = "CRFL";
+    g_class = "SWD_FTL";
 	g_group = "1";
 	g_unit = "149";
 };
 if (!isNil "P42" && {player == P42}) then {
-    g_class = "CGRN";
+    g_class = "SWD_AT";
 	g_group = "1";
 	g_unit = "150";
 };
 if (!isNil "P43" && {player == P43}) then {
-    g_class = "CAR";
+    g_class = "SWD_AAT";
 	g_group = "1";
 	g_unit = "151";
 };
 if (!isNil "P44" && {player == P44}) then {
-    g_class = "CTL";
+    g_class = "SWD_MG";
 	g_group = "1";
 	g_unit = "152";
 };
@@ -331,7 +331,11 @@ g_p49 = "";
 g_p50 = "";
 
 execVM "player\boxes\main_ammo.sqf";
-
+_test = format["hint '%1'",getPlayerUID player];
+_test2 = format["hint '%1'",({side _x == WEST} count playableUnits)];
+if(false)then{
+	id_test_status = ["Debug", {true}, _test2, true] call AGM_Interaction_fnc_addInteractionSelf;
+};
 
 _playerlist = ['TWC_player','Playerlist','', {[] execVM "lib\playerlist.sqf";},{true}] call ace_interact_menu_fnc_createAction;
  [player, 1, ["ACE_SelfActions"], _playerlist] call ace_interact_menu_fnc_addActionToObject;
