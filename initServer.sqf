@@ -3,7 +3,7 @@ _trigArea = [0, 0, 0, false];
 _trigAct = ["", "", false];
 _trigState = ["(count playableUnits) < 10", 
 	"
-	lowPlayerCountScript = execVM 'TWC\playerCount\lowPlayerCount.sqf';
+	//lowPlayerCountScript = execVM 'TWC\playerCount\lowPlayerCount.sqf';
 	"
 	, "terminate lowPlayerCountScript;"];
 
