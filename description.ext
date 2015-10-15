@@ -145,10 +145,10 @@ class CfgFunctions
 		{
 			class RadioTower {file = "func\fnc_RadioTower.sqf";};
 		};
-		class SideMissionArmoured
-		{
-			class SideMissionArmoured {file = "func\fnc_ArmouredSideMission.sqf";};
-		};
+		//class SideMissionArmoured
+		//{
+			//class SideMissionArmoured {file = "func\fnc_ArmouredSideMission.sqf";};
+		//};
 	};
 };
 
