@@ -31,8 +31,8 @@ if (isServer) then
 TaskArray=["Pygros","Charkia","Rodopoli","Paros","Frini","Galati","Syrta","Agios Dionysios","Poliakko","Neochori"];
 null = [] execVM "ao\RandomArray.sqf";
 
-SideMissionsMarkerArray = ["SideMission1","SideMission2","SideMission3"];
-null = [] execVM "ao\RandomSideMission.sqf";
+//SideMissionsMarkerArray = ["SideMission1","SideMission2","SideMission3"];
+//null = [] execVM "ao\RandomSideMission.sqf";
 
 //calling init files
 null = [] execVM "TWC\init.sqf";
