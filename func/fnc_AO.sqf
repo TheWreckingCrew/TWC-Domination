@@ -11,10 +11,13 @@
 *  fuck all expect for one AO
 *
 */
-
+if (isServer) then {
 //bunker set and Radar set
 AObunkercount = 0;
 RadioTowerCheck = 0;
+};
+
+hint"AO created";
 
 //Timeout
 _bunkertime = 0;
@@ -284,7 +287,7 @@ if isServer then {
 
 
 
-waituntil {(triggeractivated _BunkerTriggerAreaOne) && (triggeractivated _BunkerTriggerAreaTwo) && (triggeractivated _BunkerTriggerAreaThree) &&  (triggeractivated _BunkerTriggerAreaThree) };
+waituntil {AObunkercount == 3 and RadioTowerCheck == 1};
 
    [format["Task%1",TaskIncrease],"succeeded"] call TWC_fnc_UpdateTask;
   _CentralMarker setmarkercolor "Colorblue";
